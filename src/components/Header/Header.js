@@ -6,7 +6,7 @@ import Dogs from '../../Assets/dogs.svg';
 const Header = () => {
     return (
         <>
-            <heder className={styles.header}>
+            <header className={styles.header}>
                 <nav className={`${styles.nav} container`}>
                     <Link className={styles.logo} to="/">
                         <img src={Dogs} alt="Logo dog" />
@@ -15,7 +15,7 @@ const Header = () => {
                         Login / Criar
                     </Link>
                 </nav>
-            </heder>
+            </header>
         </>
     );
 };
