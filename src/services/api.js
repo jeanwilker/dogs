@@ -6,7 +6,7 @@ export function TOKEN_POST(body) {
         options: {
             method: 'POST',
             headers: {
-                'Content-Type': 'aplication/json',
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(body),
         },
@@ -33,6 +33,19 @@ export function USER_GET(token) {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
+        },
+    };
+}
+
+export function USER_POST(body) {
+    return {
+        url: `${url}api/user`,
+        options: {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(body),
         },
     };
 }
