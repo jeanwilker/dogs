@@ -8,10 +8,11 @@ import { ReactComponent as AdicionarFotos } from '../../../Assets/adicionar.svg'
 import { ReactComponent as Sair } from '../../../Assets/sair.svg';
 
 import styles from './UserHeaderNav.module.css';
+import useMedia from '../../../Hooks/useMedia';
 
 const UserHeaderNav = () => {
-    const [mobile, setMobile] = useState(null);
     const { userLogout } = useContext(UserContext);
+    const mobile = useMedia('(max-width: 40rem)')
 
     return (
         <nav className={styles.nav}>
