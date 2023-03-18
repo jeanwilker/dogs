@@ -40,6 +40,8 @@ input {
     font-size: 1rem;
     font-family: var(--type-first);
     color: #333;
+    border: none;
+    background-color: unset;
 }
 
 a {
