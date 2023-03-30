@@ -5,7 +5,7 @@ const useFetch = () => {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
 
-    const resquest = useCallback(async (url, options) => {
+    const request = useCallback(async (url, options) => {
         let response;
         let json;
 
@@ -25,7 +25,7 @@ const useFetch = () => {
         }
     }, []);
 
-    return { data, error, loading, resquest };
+    return { data, error, loading, request };
 };
 
 export default useFetch;

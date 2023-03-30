@@ -5,7 +5,7 @@ import { UserContext } from '../../../UserContext/UserContext';
 
 import Button from '../../Forms/Button/Button';
 import Input from '../../Forms/Input/Input';
-import Error from '../../Helper/Error';
+import Error from '../../Helper/Error/Error';
 
 import styles from './LoginForm.module.css';
 import stylesBtn from '../../Forms/Button/Button.module.css';

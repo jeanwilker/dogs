@@ -6,7 +6,7 @@ import useFetch from '../../../Hooks/useFetch';
 import { USER_POST } from '../../../services/api';
 import { useContext } from 'react';
 import { UserContext } from '../../../UserContext/UserContext';
-import Error from '../../Helper/Error';
+import Error from '../../Helper/Error/Error';
 
 const LoginCreate = () => {
     const username = useForms();
@@ -14,7 +14,7 @@ const LoginCreate = () => {
     const password = useForms();
 
     const { userLogin } = useContext(UserContext);
-    const { loading, error, resquest } = useFetch();
+    const { loading, error, request } = useFetch();
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -23,7 +23,7 @@ const LoginCreate = () => {
             email: email.value,
             password: password.value,
         });
-        const { response } = await resquest(url, options);
+        const { response } = await request(url, options);
         if (response.ok) userLogin(username.value, password.value);
     }
 

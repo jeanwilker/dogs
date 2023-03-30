@@ -1,6 +1,6 @@
 import Input from '../../../components/Forms/Input/Input';
 import Button from '../../../components/Forms/Button/Button';
-import Error from '../../../components/Helper/Error';
+import Error from '../../../components/Helper/Error/Error';
 
 import useForms from '../../../Hooks/useForms';
 import useFetch from '../../../Hooks/useFetch';
@@ -15,7 +15,7 @@ const UserPhotoPost = () => {
     const peso = useForms('number');
     const idade = useForms('number');
     const [img, setImg] = useState({});
-    const { data, error, loading, resquest } = useFetch();
+    const { data, error, loading, request } = useFetch();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -32,7 +32,7 @@ const UserPhotoPost = () => {
 
         const token = window.localStorage.getItem('token');
         const { url, options } = PHOTO_POST(formData, token);
-        resquest(url, options);
+        request(url, options);
     }
 
     function handleImgChange({ target }) {

@@ -1,7 +1,10 @@
+import Feed from "../../components/Feed/Feed";
 
 const Home = () => {
   return (
-    <>Home</>
+    <section className="container main__conainer">
+      <Feed />
+    </section>
   )
 }
 
