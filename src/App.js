@@ -4,7 +4,7 @@ import { UserStorage } from './UserContext/UserContext';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
-import Login from './components/Login/Login';
+import Login from './pages/Login/Login';
 import User from './pages/User/User';
 
 import './App.css';
