@@ -10,11 +10,11 @@
     cursor: pointer;
 }
 
-.photo img {
+.photo > div {
     grid-area: 1/1;
 }
 
-.visualização {
+.visualization {
     background-color: rgba(0, 0, 0, 0.3);
     color: white;
     font-size: 1rem;
@@ -25,11 +25,11 @@
     display: none;
 }
 
-.photo:hover .visualização {
+.photo:hover .visualization {
     display: flex;
 }
 
-.visualização::before {
+.visualization::before {
     width: 16px;
     height: 10px;
     
