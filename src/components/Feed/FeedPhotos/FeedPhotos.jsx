@@ -8,16 +8,16 @@ import { PHOTOS_GET } from '../../../services/api';
 
 import styles from './FeedPhotos.module.css';
 
-const FeedPhotos = ({ setModalPhoto }) => {
+const FeedPhotos = ({ user, setModalPhoto }) => {
     const { data, loading, error, request } = useFetch();
 
     useEffect(() => {
         async function fetchPhotos() {
-            const { url, options } = PHOTOS_GET({ page: 1, total: 6, user: 0 });
+            const { url, options } = PHOTOS_GET({ page: 1, total: 6, user });
             const { response, json } = await request(url, options);
         }
         fetchPhotos();
-    }, [request]);
+    }, [request, user]);
 
     if (error) return <Error error={error} />;
     if (loading) return <Loading />;
