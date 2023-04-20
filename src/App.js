@@ -8,6 +8,7 @@ import Login from './pages/Login/Login';
 import User from './pages/User/User';
 import ProtectedRoute from './components/Header/ProtectedRoute/ProtectedRoute';
 import Photo from './components/Photo/Photo';
+import UserProfile from './pages/User/UserProfile/UserProfile';
 
 import './App.css';
 
@@ -30,6 +31,7 @@ function App() {
                             }
                         />
                         <Route path="foto/:id" element={<Photo />} />
+                        <Route path="perfil/:user" element={<UserProfile />} />
                     </Routes>
 
                     <Footer />
