@@ -20,7 +20,7 @@ const Photo = () => {
     if (loading) return <Loading />;
     if (data)
         return (
-            <section className="container main__conainer">
+            <section className="container main__container">
                 <PhotoContent single={true} data={data} />
             </section>
         );

@@ -4,6 +4,7 @@ import UserHeader from './UserHeader/UserHeader';
 import Feed from '../../components/Feed/Feed';
 import UserPhotoPost from './UserPhotoPost/UserPhotoPost';
 import UserStats from './UserStats/UserStats';
+import NotFound from '../../components/NotFound/NotFound';
 
 import { useContext } from 'react';
 import { UserContext } from '../../UserContext/UserContext';
@@ -18,6 +19,7 @@ const User = () => {
                 <Route path="/" element={<Feed user={data.id} />} />
                 <Route path="postar" element={<UserPhotoPost />} />
                 <Route path="estatisticas" element={<UserStats />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </section>
     );
