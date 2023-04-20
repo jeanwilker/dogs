@@ -6,9 +6,10 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import User from './pages/User/User';
+import ProtectedRoute from './components/Header/ProtectedRoute/ProtectedRoute';
+import Photo from './components/Photo/Photo';
 
 import './App.css';
-import ProtectedRoute from './components/Header/ProtectedRoute/ProtectedRoute';
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
             <BrowserRouter>
                 <UserStorage>
                     <Header />
+
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="login/*" element={<Login />} />
@@ -27,7 +29,9 @@ function App() {
                                 </ProtectedRoute>
                             }
                         />
+                        <Route path="foto/:id" element={<Photo />} />
                     </Routes>
+
                     <Footer />
                 </UserStorage>
             </BrowserRouter>
