@@ -1,12 +1,13 @@
 import Input from '../../../components/Forms/Input/Input';
 import Button from '../../../components/Forms/Button/Button';
+import Error from '../../../components/Helper/Error/Error';
+import Head from '../../../components/Helper/Head/Head';
 
+import { useContext } from 'react';
 import useForms from '../../../Hooks/useForms';
 import useFetch from '../../../Hooks/useFetch';
 import { USER_POST } from '../../../services/api';
-import { useContext } from 'react';
 import { UserContext } from '../../../UserContext/UserContext';
-import Error from '../../../components/Helper/Error/Error';
 
 const LoginCreate = () => {
     const username = useForms();
@@ -29,6 +30,7 @@ const LoginCreate = () => {
 
     return (
         <section className="anime__left">
+            <Head title="Criar conta" />
             <h1 className="title">Cadastre-se</h1>
             <form onSubmit={handleSubmit}>
                 <Input

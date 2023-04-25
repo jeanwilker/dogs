@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Input from '../../../components/Forms/Input/Input';
 import Button from '../../../components/Forms/Button/Button';
 import Error from '../../../components/Helper/Error/Error';
+import Head from '../../../components/Helper/Head/Head';
 
 import useForms from '../../../Hooks/useForms';
 import useFetch from '../../../Hooks/useFetch';
@@ -43,6 +44,7 @@ const LoginPasswordReset = () => {
 
     return (
         <>
+            <Head title="Resete a senha" />
             <h1 className="title">Resete a senha</h1>
 
             <form onSubmit={handleSubmit}>
