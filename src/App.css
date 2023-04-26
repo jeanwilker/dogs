@@ -104,3 +104,7 @@ a {
 .app__body {
     flex: 1;
 }
+
+.victoryContainer {
+    height: initial !important;
+}
